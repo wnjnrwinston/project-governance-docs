@@ -8,6 +8,7 @@ A small OpenClaw skill for two common documentation/governance workflows:
 It also supports a simple workflow selector:
 
 - `docs menu`
+- `/docsmenu`
 - `greenfield`
 - `retrofit`
 - `update impacted docs`
@@ -35,7 +36,7 @@ Use when the project already exists and you want docs/governance based on the cu
 
 ## Quick invoke
 
-If you say `docs menu`, the skill should present:
+If you say `docs menu` or `/docsmenu`, the skill should present:
 
 1. `greenfield`
 2. `retrofit`
@@ -58,6 +59,11 @@ dist/project-governance-docs.skill
 ```
 
 ## Usage examples
+
+### Show menu
+```text
+/docsmenu
+```
 
 ### New project
 ```text

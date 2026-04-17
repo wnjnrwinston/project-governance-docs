@@ -16,7 +16,10 @@ Default goal:
 
 ## Quick invoke
 
-If the user says `docs menu`, present this menu:
+If the user says `docs menu` or `/docsmenu`, present this fixed menu:
+
+## Docs Menu
+Choose one:
 
 1. `greenfield` — define the project before coding
 2. `retrofit` — document and govern the current implementation first
@@ -24,7 +27,9 @@ If the user says `docs menu`, present this menu:
 4. `backup project` — create a real project checkpoint before risky changes
 5. `restore project` — restore from the latest real checkpoint or backup
 
-Treat `docs menu` as a workflow selector, not as a literal system command.
+Reply with one option name to continue.
+
+Treat `docs menu` and `/docsmenu` as workflow selectors, not as literal system commands.
 
 ## Workflow decision
 

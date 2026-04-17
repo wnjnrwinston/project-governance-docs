@@ -23,7 +23,7 @@ If mixed:
 
 ## Quick menu vocabulary
 Use these terms consistently:
-- `docs menu` = show the workflow selector
+- `docs menu` or `/docsmenu` = show the workflow selector
 - `greenfield` = foundation docs before implementation
 - `retrofit` = current-state-first docs for an existing project
 - `update impacted docs` = update only related docs
