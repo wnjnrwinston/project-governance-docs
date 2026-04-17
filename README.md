@@ -31,8 +31,48 @@ This skill helps keep project work practical and controlled by:
 ### Greenfield
 Use when the project has not started yet and you want foundation docs before coding.
 
+**Default docs created:**
+- `docs/PROJECT_BRIEF.md`
+- `docs/SPEC.md`
+- `docs/ARCHITECTURE.md`
+- `docs/ENGINEERING_RULES.md`
+- `docs/GUARDRAILS.md`
+- `docs/RUNBOOK.md`
+- `docs/TASKS.md`
+- `docs/DECISIONS.md`
+
 ### Retrofit
 Use when the project already exists and you want docs/governance based on the current implementation first.
+
+**Default docs created:**
+- `docs/CURRENT_STATE.md`
+- `docs/SPEC.md`
+- `docs/ENGINEERING_RULES.md`
+- `docs/GUARDRAILS.md`
+- `docs/RUNBOOK.md`
+- `docs/TASKS.md`
+
+### Update impacted docs
+Use after a completed change when only some docs became inaccurate.
+
+**Expected behavior:**
+- update only the docs affected by the latest change
+- leave unrelated docs untouched if they are still accurate
+
+### Backup project
+Use before risky or multi-file changes.
+
+**Expected behavior:**
+- create a real checkpoint
+- prefer git if available
+- otherwise create a manual backup
+
+### Restore project
+Use when you need to recover to a real checkpoint.
+
+**Expected behavior:**
+- restore from a real backup/checkpoint if available
+- say so clearly if no real restore path exists
 
 ## Quick invoke
 

@@ -22,10 +22,15 @@ If the user says `docs menu` or `/docsmenu`, present this fixed menu:
 Choose one:
 
 1. `greenfield` — define the project before coding
+   - default docs: `docs/PROJECT_BRIEF.md`, `docs/SPEC.md`, `docs/ARCHITECTURE.md`, `docs/ENGINEERING_RULES.md`, `docs/GUARDRAILS.md`, `docs/RUNBOOK.md`, `docs/TASKS.md`, `docs/DECISIONS.md`
 2. `retrofit` — document and govern the current implementation first
+   - default docs: `docs/CURRENT_STATE.md`, `docs/SPEC.md`, `docs/ENGINEERING_RULES.md`, `docs/GUARDRAILS.md`, `docs/RUNBOOK.md`, `docs/TASKS.md`
 3. `update impacted docs` — update only the documentation affected by the latest change
+   - update only the docs that became inaccurate
 4. `backup project` — create a real project checkpoint before risky changes
+   - do not create governance docs by default
 5. `restore project` — restore from the latest real checkpoint or backup
+   - do not claim restore is possible unless a real checkpoint exists
 
 Reply with one option name to continue.
 
