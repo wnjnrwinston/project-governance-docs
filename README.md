@@ -98,6 +98,35 @@ source/project-governance-docs/
 dist/project-governance-docs.skill
 ```
 
+## Installation
+
+### Option 1 — packaged skill
+Download:
+- `dist/project-governance-docs.skill`
+
+Then install/import it using your OpenClaw skill import workflow.
+
+### Option 2 — manual source install
+Copy the skill folder from:
+- `source/project-governance-docs/`
+
+into your local OpenClaw skills directory, then reload/restart OpenClaw if needed.
+
+## First use
+
+After install, try:
+
+```text
+/docsmenu
+```
+
+That should present the 5 workflow options:
+- `greenfield`
+- `retrofit`
+- `update impacted docs`
+- `backup project`
+- `restore project`
+
 ## Usage examples
 
 ### Show menu
