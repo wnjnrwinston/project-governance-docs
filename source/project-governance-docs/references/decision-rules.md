@@ -90,3 +90,85 @@ Cosmetic:
 - naming polish
 - formatting issues
 - minor structure preferences
+
+## Decide whether a lesson should be extracted
+Extract a lesson when one of these is true:
+- the same mistake happened more than once
+- the fix depended on a subtle repo-specific rule
+- the failure mode is likely to recur during normal maintenance
+- the lesson would improve review/checklist quality with one short rule
+
+Do not extract a lesson when:
+- it is obvious and unlikely to repeat
+- it adds noise without changing future decisions
+- it is only a one-off environmental accident with no reusable prevention rule
+
+## Decide lesson permanence level
+Use `temporary` when:
+- the lesson matters only for the next few steps
+- the repo is in a temporary intermediate state
+
+Use `project-specific` when:
+- the lesson depends on this repo's workflow, docs, or constraints
+- future maintainers of this project should see it again
+
+Use `durable principle` when:
+- the lesson generalizes beyond this repo
+- it improves future governance or implementation discipline across projects
+
+## Decide fallback behavior when uncertain
+If inspection/build/lint/tooling results are unclear:
+- confirm what still works
+- name the exact unknown
+- reduce to the smallest testable step
+- avoid broad fixes based on guesswork
+- prefer a bounded fallback plan over speculative redesign
+
+## Decide what counts as done
+Prefer work to count as done only when there is compact evidence such as:
+- inspected file change matches requested behavior
+- command output supports the claim
+- UI/route behavior was observed
+- remaining uncertainty is explicitly named
+
+"Done" without evidence is weak completion, not strong completion.
+
+## Decide when to require pre-mortem thinking
+Use a light pre-mortem when work is:
+- risky
+- multi-file
+- hard to roll back
+- likely to affect workflow-critical docs or rules
+
+Keep it short:
+- likely break points
+- safest checkpoint
+- fastest rollback path
+
+## Decide whether a lesson should become a skill candidate
+Promote a lesson to skill-candidate review when:
+- it keeps recurring across tasks
+- it meaningfully changes future behavior rather than just recording history
+- it has a clear capability that can be described, not just a vague good idea
+- the best form may be stronger than memory alone
+
+Then decide the smallest useful form:
+- `memory only`
+- `checklist only`
+- `skill upgrade`
+- `new skill`
+
+Also decide the most natural behavior type:
+- `passive`
+- `active`
+- `toggle`
+- `triggered`
+
+## Decide whether a captured lesson should be retained, promoted, or retired
+After capture:
+- retain briefly if the source case still matters
+- compress when the raw form is noisier than the reusable lesson
+- promote when the lesson now has clear repeated value as checklist or skill behavior
+- retire duplicate passive copies when a stronger promoted form already exists
+
+Default to keeping one compact source or pointer, not many repeated variants.

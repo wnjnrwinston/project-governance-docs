@@ -119,6 +119,14 @@ Call out early:
 - deployment uncertainty
 - scope creep risk
 
+## Lean learning-loop additions
+Even in greenfield mode, keep learning-loop behavior small and practical:
+- for risky work, do a short pre-mortem
+- prefer done + evidence over bare completion claims
+- if an early planning mistake reveals a reusable rule, compress it into a short lesson with a permanence level
+
+Do not turn greenfield planning into a memory-system redesign.
+
 ## Anti-patterns
 Do not:
 - write architecture for a system bigger than v1

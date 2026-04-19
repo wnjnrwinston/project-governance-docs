@@ -60,6 +60,120 @@ Only include questions that affect:
 - Phase 2 / Verification
 - Phase 3 / Deferred or post-v1
 
+## Done + evidence mini-template
+- Done when:
+- Evidence checked:
+- Docs impacted:
+- Rollback/checkpoint note:
+
+## Post-task review mini-template
+- What changed:
+- Why:
+- Proof checked:
+- Risk left:
+- Lesson learned:
+- Should this become a rule/checklist/guardrail item?
+
+## Lesson extraction mini-template
+- Incident:
+- Cause:
+- Prevention rule:
+- Applies to:
+- Permanence level: `temporary` | `project-specific` | `durable principle`
+
+## Failure fallback mini-template
+- Failure/uncertainty:
+- Confirmed facts:
+- Unknowns:
+- Smallest safe next step:
+- Fallback path if still unclear:
+
+## Pre-mortem mini-template
+- Likely break points:
+- Safest checkpoint:
+- Fastest rollback path:
+
+## Skill Evolution Card
+Use this only when a captured lesson may deserve stronger formalization.
+
+- Candidate name:
+- Problem it solves:
+- What it does / what it can do:
+- Why worth formalizing:
+- Best type: `passive` | `active` | `toggle` | `triggered`
+- Trigger / activation condition:
+- Out-of-the-box capability:
+- Out of scope:
+- Best form: `new skill` | `skill upgrade` | `checklist only` | `memory only`
+- Permanence level: `temporary` | `project-specific` | `durable principle`
+
+### Skill Evolution Card examples
+
+#### Example 1 — hardware control calibration guard
+- Candidate name: Hardware Control Calibration Guard
+- Problem it solves: teams jump from idea to UI before device control paths and value mappings are verified
+- What it does / what it can do: forces path -> value -> verified control flow before operator UI grows
+- Why worth formalizing: repeated high-cost failure pattern in hardware/OSC work
+- Best type: `passive`
+- Trigger / activation condition: hardware control, OSC path discovery, device parameter automation
+- Out-of-the-box capability: prompts verification-first workflow and rejects speculative UI-first reasoning
+- Out of scope: full protocol discovery, hardware simulation, vendor-specific deep automation
+- Best form: `checklist only` or `skill upgrade`
+- Permanence level: `durable principle`
+
+#### Example 2 — impacted-docs review trigger
+- Candidate name: Impacted Docs Review Trigger
+- Problem it solves: implementation changes land but docs drift because no one asks which docs became inaccurate
+- What it does / what it can do: prompts a narrow docs review after meaningful changes and keeps unrelated docs untouched
+- Why worth formalizing: high-value discipline with low cost; prevents stale documentation
+- Best type: `triggered`
+- Trigger / activation condition: implementation or behavior change that may affect scope, runbook, current-state, or tasks
+- Out-of-the-box capability: asks which docs changed naturally and prefers targeted doc edits
+- Out of scope: full doc-pack rewrites, automatic documentation generation for everything
+- Best form: `skill upgrade`
+- Permanence level: `project-specific`
+
+#### Example 3 — strict done + evidence mode
+- Candidate name: Strict Done + Evidence Mode
+- Problem it solves: tasks get declared done without enough proof, causing weak completion claims
+- What it does / what it can do: requires compact proof fields such as done when, evidence checked, docs impacted, and rollback/checkpoint note
+- Why worth formalizing: improves completion quality and review confidence without much overhead
+- Best type: `toggle`
+- Trigger / activation condition: risky work, multi-file work, or user request for stricter verification discipline
+- Out-of-the-box capability: changes completion style from bare status to compact evidence-backed status
+- Out of scope: mandatory heavyweight testing ceremony for trivial edits
+- Best form: `skill upgrade`
+- Permanence level: `project-specific`
+
+## Knowledge Promotion Lifecycle
+Use this to prevent lesson storage from becoming passive clutter.
+Do not add this as a new docs-menu workflow.
+Use it as a small internal promotion path.
+
+### Stages
+1. `capture`
+   - store the lesson briefly
+2. `compress`
+   - reduce raw detail into a compact reusable lesson
+3. `evaluate`
+   - decide whether it stays memory-only or deserves stronger formalization
+4. `promote`
+   - convert into checklist, skill upgrade, or new skill if justified
+5. `retain`
+   - keep one compact source record or pointer
+6. `retire`
+   - avoid keeping duplicated passive copies once a stronger form exists
+
+### Promotion status mini-template
+- Promotion status: `unpromoted` | `compressed` | `promoted to checklist` | `promoted to skill upgrade` | `promoted to new skill` | `retired as duplicate/noise`
+- Source retained?: yes/no
+- Why retained or retired:
+
+### Lifecycle rule of thumb
+- do not delete useful source too early
+- do not keep long raw notes and promoted forms duplicated forever
+- prefer one compact retained source plus the promoted form
+
 ## Lock-flex-wait template
 ### Lock now
 Items that must be decided before build proceeds.

@@ -95,6 +95,102 @@ After a task:
 - if no behavior, scope, rule, operation, or task status changed, no doc update is required
 - prefer targeted edits over broad doc refreshes
 
+## Lean learning-loop upgrades
+
+Use these upgrades only when they materially improve execution quality.
+Keep them small, operational, and tied to repo reality.
+
+### 1. Lesson extraction
+When a mistake, near-miss, repeated confusion, or verification gap appears, compress it into a small reusable lesson.
+
+Preferred format:
+- incident
+- cause
+- prevention rule
+- applies to
+- permanence level
+
+Permanence levels:
+- `temporary` = useful for the next few tasks only
+- `project-specific` = should stay with this repo/workflow
+- `durable principle` = reusable across projects unless contradicted
+
+Only promote a lesson when it helps avoid repeat failure.
+Do not create a large lesson log by default.
+
+### 2. Failure fallback behavior
+When lint/build/env/api/tooling inspection becomes unclear or fails:
+- stop broad implementation work
+- separate what is confirmed from what is now uncertain
+- reduce the task to the smallest verifiable next step
+- prefer read/inspect/reproduce over speculation
+- if ambiguity remains, propose a bounded fallback path rather than an invented fix
+
+### 3. Done + evidence discipline
+Do not treat "implemented" as enough by itself.
+For meaningful work, prefer a compact done check:
+- done when
+- evidence checked
+- docs impacted
+- rollback/checkpoint note
+
+Keep this compact.
+Evidence can be inspection, command output, observed UI behavior, test result, or explicit limitation.
+
+### 4. Post-task review / teach-back
+After multi-step or risky work, include a short review:
+- what changed
+- why
+- proof checked
+- risk left
+- lesson learned
+- should this become a rule/checklist/guardrail item?
+
+### 5. Pre-mortem thinking
+Before risky or multi-file changes, briefly identify:
+- likely break points
+- safest checkpoint
+- fastest rollback path if the change goes wrong
+
+Keep this light.
+Do not turn it into a ceremony for trivial edits.
+
+### 6. Memory compression
+When capturing lessons, distinguish:
+- temporary lesson
+- project-specific lesson
+- durable principle
+
+Do not store everything at the same level.
+Prefer compressed lessons over long narrative unless the narrative is necessary.
+
+### 7. Skill-candidate judgement
+When a lesson seems strong enough to deserve more than memory alone, evaluate it with a small Skill Evolution Card.
+
+Use it to answer:
+- what problem it solves
+- what it does / what it can do
+- whether it is best expressed as `passive`, `active`, `toggle`, or `triggered`
+- whether it should become a `new skill`, `skill upgrade`, `checklist only`, or remain `memory only`
+
+Do not promote every good lesson into a skill.
+Use the smallest form that gives real repeated value.
+
+### 8. Knowledge promotion lifecycle
+Treat captured lessons as material that may be promoted, not as storage that must grow forever.
+
+Preferred path:
+- capture
+- compress
+- evaluate
+- promote
+- retain
+- retire
+
+Keep one compact retained source when useful.
+Avoid duplicated passive buildup once a stronger promoted form already exists.
+Do not turn this into a new docs-menu workflow unless a truly separate user-facing workflow emerges later.
+
 ## Checkpoint and rollback rule
 
 For in-progress projects:

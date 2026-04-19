@@ -85,6 +85,55 @@ After implementation work:
 - if operational steps changed, update `RUNBOOK.md`
 - if remaining work changed, update `TASKS.md`
 - leave unrelated docs untouched if they are still accurate
+- for meaningful work, prefer a compact done+evidence note rather than a bare completion claim
+- if a repeatable lesson appeared, capture it in compressed form instead of leaving it implicit
+
+## Lean learning-loop retrofit additions
+
+### Lesson extraction
+When retrofit work exposes repeated mistakes, recurring ambiguity, or subtle repo-specific traps, extract a small lesson using:
+- incident
+- cause
+- prevention rule
+- applies to
+- permanence level
+
+Use permanence levels:
+- `temporary`
+- `project-specific`
+- `durable principle`
+
+### Failure fallback tree
+When lint/build/env/api/tooling inspection becomes unclear or fails:
+1. stop broad edits
+2. restate confirmed facts vs unknowns
+3. reduce to the smallest verifiable next step
+4. choose a bounded fallback path if certainty does not improve
+5. document any meaningful residual risk instead of hiding it
+
+### Post-task review
+After risky or multi-step retrofit work, include a short teach-back:
+- what changed
+- why
+- proof checked
+- risk left
+- lesson learned
+- whether the lesson should become a rule/checklist/guardrail item
+
+### Pre-mortem expectation
+Before risky or multi-file changes, briefly note:
+- likely break points
+- safest checkpoint
+- fastest rollback path if the change goes wrong
+
+Keep this lean and operational.
+
+### Knowledge promotion expectation
+If a retrofit lesson becomes strong enough for checklist or skill-candidate review:
+- compress it first
+- promote it only if repeated value is clear
+- retain one compact source if still useful
+- avoid leaving many passive duplicated lesson copies behind
 
 ## Checkpoint and rollback discipline
 Before risky fixes or multi-file changes:
