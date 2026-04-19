@@ -111,15 +111,15 @@ Use this only when a captured lesson may deserve stronger formalization.
 
 #### Example 1 — hardware control calibration guard
 - Candidate name: Hardware Control Calibration Guard
-- Problem it solves: teams jump from idea to UI before device control paths and value mappings are verified
+- Problem it solves: teams in hardware/OSC/control-calibration style projects jump from idea to UI before device control paths and value mappings are verified
 - What it does / what it can do: forces path -> value -> verified control flow before operator UI grows
 - Why worth formalizing: repeated high-cost failure pattern in hardware/OSC work
 - Best type: `passive`
 - Trigger / activation condition: hardware control, OSC path discovery, device parameter automation
-- Out-of-the-box capability: prompts verification-first workflow and rejects speculative UI-first reasoning
+- Out-of-the-box capability: prompts verification-first workflow and rejects speculative UI-first reasoning in hardware/control-oriented work
 - Out of scope: full protocol discovery, hardware simulation, vendor-specific deep automation
 - Best form: `checklist only` or `skill upgrade`
-- Permanence level: `durable principle`
+- Permanence level: `project-specific`
 
 #### Example 2 — impacted-docs review trigger
 - Candidate name: Impacted Docs Review Trigger
