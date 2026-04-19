@@ -45,6 +45,47 @@ Included behavior now covers:
 - skill-candidate judgement
 - knowledge promotion lifecycle (`capture -> compress -> evaluate -> promote -> retain -> retire`)
 
+## Why this project is useful
+
+- small but operational
+- reality-first retrofit behavior
+- avoids fake rollback claims
+- supports lesson extraction and evidence-backed completion
+- keeps governance lean instead of bloated
+
+## Contributing
+
+Contributions are welcome.
+
+This project works best when changes stay:
+- small
+- practical
+- well-scoped
+- aligned with the current workflow philosophy
+
+### Good places to start
+New contributors can help by:
+- clarifying ambiguous wording
+- improving examples
+- tightening retrofit/greenfield guidance
+- improving README clarity
+- adding small reusable templates
+- strengthening practical guardrails or decision rules
+
+### Suggested contribution flow
+- for small documentation or wording fixes, open a PR directly
+- for larger workflow changes, open an issue or discussion first
+- keep PRs focused and explain:
+  - what changed
+  - why
+  - what was intentionally left unchanged
+
+### Before proposing larger changes
+It helps to explain:
+- what problem the change solves
+- why the current workflow is insufficient
+- why a smaller change would not be enough
+
 ## Modes
 
 ### Greenfield
