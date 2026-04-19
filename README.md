@@ -25,6 +25,25 @@ This skill helps keep project work practical and controlled by:
 - avoiding unnecessary redesign
 - updating only impacted docs instead of refreshing everything
 - using real backup/restore discipline instead of fake undo
+- extracting compact lessons from repeated mistakes or ambiguity
+- preferring bounded fallback behavior when tooling/build/lint/env inspection becomes unclear
+- requiring compact proof of completion instead of weak "done" claims
+- supporting small post-task review and pre-mortem discipline where it adds real value
+- evaluating whether a strong repeated lesson should remain memory, become a checklist, or be promoted into a skill upgrade
+
+## Lean learning-loop features
+
+These upgrades are intentionally small and integrated into the existing workflows.
+They do **not** add a new docs-menu mode.
+
+Included behavior now covers:
+- lesson extraction
+- failure fallback behavior
+- done + evidence discipline
+- post-task review / teach-back
+- light pre-mortem thinking
+- skill-candidate judgement
+- knowledge promotion lifecycle (`capture -> compress -> evaluate -> promote -> retain -> retire`)
 
 ## Modes
 
