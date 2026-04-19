@@ -167,17 +167,17 @@ retrofit — check current state first, then make the docs based on the existing
 
 ### After a change
 ```text
-update impacted docs
+update impacted docs — update only the docs affected by the latest confirmed change in the current project context.
 ```
 
 ### Before risky work
 ```text
-backup project
+backup project — create a real checkpoint for the current clearly scoped project; if the target project is unclear, ask which project/repo should be backed up first.
 ```
 
 ### Recover from checkpoint
 ```text
-restore project
+restore project — restore the current clearly scoped project from a real checkpoint; if the target project is unclear, ask which project/repo should be restored first.
 ```
 
 ## License
