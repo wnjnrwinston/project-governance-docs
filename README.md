@@ -82,7 +82,8 @@ Use after a completed change when only some docs became inaccurate.
 Use before risky or multi-file changes.
 
 **Expected behavior:**
-- create a real checkpoint
+- create a real checkpoint for the current clearly scoped project
+- if project scope is unclear, ask which project/repo should be backed up
 - prefer git if available
 - otherwise create a manual backup
 
@@ -90,7 +91,8 @@ Use before risky or multi-file changes.
 Use when you need to recover to a real checkpoint.
 
 **Expected behavior:**
-- restore from a real backup/checkpoint if available
+- restore the current clearly scoped project from a real backup/checkpoint if available
+- if project scope is unclear, ask which project/repo should be restored
 - say so clearly if no real restore path exists
 
 ## Quick invoke

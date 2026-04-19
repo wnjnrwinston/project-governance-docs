@@ -29,8 +29,10 @@ Choose one:
    - update only the docs that became inaccurate
 4. `backup project` — create a real project checkpoint before risky changes
    - do not create governance docs by default
+   - if the target project/repo is unclear, ask which one should be backed up
 5. `restore project` — restore from the latest real checkpoint or backup
    - do not claim restore is possible unless a real checkpoint exists
+   - if the target project/repo is unclear, ask which one should be restored
 
 Reply with one option name to continue.
 
@@ -198,6 +200,7 @@ For in-progress projects:
 - if git is unavailable, prefer minimal manual backups of touched files
 - describe rollback in `RUNBOOK.md` only when the rollback path is real
 - if rollback is manual, say so explicitly
+- if the active project target is not already clear from context, ask before running backup/restore workflow against a specific project or repo
 
 ## Output requirements
 
