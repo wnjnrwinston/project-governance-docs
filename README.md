@@ -149,6 +149,8 @@ If you say `docs menu` or `/docsmenu`, the skill should present:
 ## Included files
 
 ```text
+index.html
+styles.css
 source/project-governance-docs/
 ├── SKILL.md
 └── references/
@@ -159,6 +161,10 @@ source/project-governance-docs/
 
 dist/project-governance-docs.skill
 ```
+
+The repo root now also includes a simple static landing page:
+- `index.html`
+- `styles.css`
 
 ## Installation
 

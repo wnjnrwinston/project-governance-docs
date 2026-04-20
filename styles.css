@@ -1,0 +1,316 @@
+:root {
+  --bg: #0b1020;
+  --bg-2: #101830;
+  --panel: rgba(255, 255, 255, 0.04);
+  --panel-2: rgba(255, 255, 255, 0.06);
+  --text: #eef3ff;
+  --muted: #a9b4d0;
+  --line: rgba(255, 255, 255, 0.12);
+  --accent: #7c9cff;
+  --accent-2: #9f7aea;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(159, 122, 234, 0.18), transparent 28%),
+    radial-gradient(circle at top left, rgba(124, 156, 255, 0.16), transparent 25%),
+    var(--bg);
+  color: var(--text);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
+}
+
+a { color: inherit; text-decoration: none; }
+
+.page-shell {
+  width: min(1240px, calc(100% - 16px));
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: rgba(11, 16, 32, 0.82);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.site-header-inner {
+  width: min(1240px, calc(100% - 16px));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 12px;
+  gap: 16px;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.top-nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 28px;
+  padding: 68px 0 28px;
+  align-items: start;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(124, 156, 255, 0.12);
+  color: #d8e2ff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero h1,
+.section h2 {
+  margin: 0;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5.6vw, 4.2rem);
+  max-width: 13ch;
+}
+
+.hero-text,
+.feature-card p,
+.workflow-card p,
+.panel p,
+.panel-note {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.hero-text {
+  max-width: 66ch;
+  margin: 18px 0 0;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.button.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.button.secondary {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.button:hover,
+.top-nav a:hover,
+.site-footer a:hover,
+.link-list a:hover {
+  opacity: 0.88;
+}
+
+.hero-card,
+.feature-card,
+.workflow-card,
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  padding: 22px;
+}
+
+.hero-card pre {
+  margin: 12px 0 0;
+  padding: 18px;
+  overflow: auto;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #dce6ff;
+  font-family: "Cascadia Code", Consolas, monospace;
+  line-height: 1.8;
+}
+
+.mini-card-title,
+.feature-card h3,
+.workflow-card h3,
+.panel h3 {
+  margin: 0;
+}
+
+.section {
+  padding: 52px 0 8px;
+}
+
+.section.alt {
+  padding-top: 42px;
+}
+
+.section-head {
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  max-width: 16ch;
+}
+
+.feature-grid,
+.workflow-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.workflow-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.start-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.support-workflows {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.feature-card,
+.workflow-card,
+.panel {
+  padding: 20px;
+}
+
+code {
+  font-family: "Cascadia Code", Consolas, monospace;
+}
+
+.link-list {
+  margin-top: 14px;
+}
+
+.link-list a {
+  color: #dfe7ff;
+  font-weight: 600;
+}
+
+.link-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.primary-card {
+  background: var(--panel-2);
+}
+
+.support-card {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.example-panel ol {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.feature-card h3,
+.workflow-card h3,
+.panel h3 {
+  font-size: 1.02rem;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.panel ul,
+.panel ol {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 30px 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 980px) {
+  .hero,
+  .feature-grid,
+  .workflow-grid,
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    position: static;
+    padding-top: 18px;
+  }
+
+  .hero h1 {
+    max-width: 12ch;
+  }
+}

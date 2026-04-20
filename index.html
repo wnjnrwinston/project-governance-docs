@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Governance Docs</title>
+  <meta name="description" content="A small OpenClaw skill for practical project governance, retrofit-first documentation, and lean learning loops.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand">Project Governance Docs</div>
+      <nav class="top-nav">
+        <a href="#why">Why useful</a>
+        <a href="#workflows">Workflows</a>
+        <a href="#learning-loops">Learning loops</a>
+        <a href="#contributing">Contributing</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">OpenClaw skill · small · practical · reality-first</div>
+          <h1>Practical project governance for greenfield and retrofit work.</h1>
+          <p class="hero-text">
+            Project Governance Docs is a small OpenClaw skill that helps you define new projects,
+            document projects already in progress, update only impacted docs, and keep governance useful without turning it into process theatre.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/wnjnrwinston/project-governance-docs" target="_blank" rel="noreferrer">View on GitHub</a>
+            <a class="button secondary" href="#start">Get started</a>
+            <a class="button secondary" href="#install">Install</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="mini-card-title">Quick invoke</div>
+          <pre>/docsmenu
+
+greenfield
+retrofit
+update impacted docs
+backup project
+restore project</pre>
+        </div>
+      </section>
+
+      <section id="why" class="section">
+        <div class="section-head">
+          <div class="eyebrow">Why this project is useful</div>
+          <h2>Small enough to stay clear, practical enough to matter.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Small but operational</h3>
+            <p>It focuses on the smallest useful governance/doc pack instead of building process theatre.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Reality-first retrofit behavior</h3>
+            <p>When code already exists, it documents current reality first instead of redesigning the project in docs.</p>
+          </article>
+          <article class="feature-card">
+            <h3>No fake rollback claims</h3>
+            <p>Backup and restore language stays honest: only promise real checkpoints, and ask when the target project is unclear.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Evidence-backed completion</h3>
+            <p>Done means more than “task complete” — it encourages compact proof and explicit residual risk.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Lesson extraction</h3>
+            <p>Repeated mistakes can be turned into compact lessons, checklists, and stronger behavior without bloating the system.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Lean by design</h3>
+            <p>It tightens existing workflows instead of creating new modes, abstractions, or a giant memory platform.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="start" class="section alt">
+        <div class="section-head">
+          <div class="eyebrow">Get started</div>
+          <h2>Three quick steps for a new user.</h2>
+        </div>
+        <div class="workflow-grid start-grid">
+          <article class="workflow-card">
+            <h3>1. Install the skill</h3>
+            <p>Import the packaged skill or copy the source folder into your local OpenClaw skills directory.</p>
+          </article>
+          <article class="workflow-card">
+            <h3>2. Open the workflow menu</h3>
+            <p>Run <code>/docsmenu</code> to pick the workflow that matches the project state.</p>
+          </article>
+          <article class="workflow-card">
+            <h3>3. Choose the right mode</h3>
+            <p>Use <strong>greenfield</strong> for new projects, <strong>retrofit</strong> for existing ones, and <strong>update impacted docs</strong> after confirmed changes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="install" class="section">
+        <div class="section-head">
+          <div class="eyebrow">Install</div>
+          <h2>Install it the simple way.</h2>
+        </div>
+        <div class="two-col">
+          <div class="panel">
+            <h3>Option 1 — packaged skill</h3>
+            <p>Download the packaged skill file and import it using your normal OpenClaw skill import flow.</p>
+            <div class="link-list">
+              <a href="https://github.com/wnjnrwinston/project-governance-docs/tree/main/dist" target="_blank" rel="noreferrer">View dist package</a>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Option 2 — source install</h3>
+            <p>Copy the source skill folder into your local OpenClaw skills directory, then reload/restart OpenClaw if needed.</p>
+            <div class="link-list">
+              <a href="https://github.com/wnjnrwinston/project-governance-docs/tree/main/source/project-governance-docs" target="_blank" rel="noreferrer">View source folder</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="workflows" class="section alt">
+        <div class="section-head">
+          <div class="eyebrow">Workflows</div>
+          <h2>Five simple workflow selectors.</h2>
+        </div>
+        <div class="workflow-grid primary-workflows">
+          <article class="workflow-card primary-card">
+            <h3>greenfield</h3>
+            <p>Define the project before coding. Best for new projects that need a foundation first.</p>
+          </article>
+          <article class="workflow-card primary-card">
+            <h3>retrofit</h3>
+            <p>Document and govern the current implementation first. Best for projects already in progress.</p>
+          </article>
+          <article class="workflow-card primary-card">
+            <h3>update impacted docs</h3>
+            <p>Update only the docs affected by the latest confirmed change in the current project context.</p>
+          </article>
+        </div>
+        <div class="workflow-grid support-workflows">
+          <article class="workflow-card support-card">
+            <h3>backup project</h3>
+            <p>Create a real checkpoint for the current clearly scoped project. If the target is unclear, ask first.</p>
+          </article>
+          <article class="workflow-card support-card">
+            <h3>restore project</h3>
+            <p>Restore the current clearly scoped project from a real checkpoint. If the target is unclear, ask first.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="learning-loops" class="section">
+        <div class="section-head">
+          <div class="eyebrow">Lean learning loops</div>
+          <h2>Built to learn without becoming bloated.</h2>
+        </div>
+        <div class="two-col">
+          <div class="panel">
+            <h3>Included behavior</h3>
+            <ul>
+              <li>learn from repeated mistakes</li>
+              <li>use bounded fallback behavior when things are unclear</li>
+              <li>prove completion with compact evidence</li>
+              <li>do short post-task review and light pre-mortem where it helps</li>
+              <li>promote strong repeated lessons into reusable behavior</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>How learning stays useful</h3>
+            <ol>
+              <li>capture</li>
+              <li>compress</li>
+              <li>evaluate</li>
+              <li>promote</li>
+              <li>retain</li>
+              <li>retire</li>
+            </ol>
+            <p class="panel-note">The goal is to preserve useful learning without keeping passive duplicated clutter forever.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="example" class="section">
+        <div class="section-head">
+          <div class="eyebrow">Example</div>
+          <h2>A simple real-world path through the skill.</h2>
+        </div>
+        <div class="panel example-panel">
+          <ol>
+            <li>Run <code>/docsmenu</code>.</li>
+            <li>Choose <strong>retrofit</strong> when the project already exists.</li>
+            <li>Inspect the current repo first.</li>
+            <li>Update only the docs that became inaccurate.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="project-links" class="section alt">
+        <div class="section-head">
+          <div class="eyebrow">Project links</div>
+          <h2>Jump straight to the right place.</h2>
+        </div>
+        <div class="workflow-grid link-grid">
+          <article class="workflow-card">
+            <h3>GitHub repository</h3>
+            <p>Main project repo with source, dist, and README.</p>
+            <div class="link-list">
+              <a href="https://github.com/wnjnrwinston/project-governance-docs" target="_blank" rel="noreferrer">Open repository</a>
+            </div>
+          </article>
+          <article class="workflow-card">
+            <h3>Packaged release files</h3>
+            <p>Useful if you want the built skill artifact first.</p>
+            <div class="link-list">
+              <a href="https://github.com/wnjnrwinston/project-governance-docs/tree/main/dist" target="_blank" rel="noreferrer">Open dist</a>
+            </div>
+          </article>
+          <article class="workflow-card">
+            <h3>Source skill folder</h3>
+            <p>Useful if you want to inspect or install from source.</p>
+            <div class="link-list">
+              <a href="https://github.com/wnjnrwinston/project-governance-docs/tree/main/source/project-governance-docs" target="_blank" rel="noreferrer">Open source</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contributing" class="section alt">
+        <div class="section-head">
+          <div class="eyebrow">Contributing</div>
+          <h2>Friendly to contributors, but still disciplined.</h2>
+        </div>
+        <div class="two-col">
+          <div class="panel">
+            <h3>Good places to start</h3>
+            <ul>
+              <li>clarify ambiguous wording</li>
+              <li>improve examples</li>
+              <li>tighten retrofit/greenfield guidance</li>
+              <li>improve README clarity</li>
+              <li>add small reusable templates</li>
+              <li>strengthen practical guardrails or decision rules</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Suggested contribution flow</h3>
+            <ul>
+              <li>For small documentation or wording fixes, open a PR directly.</li>
+              <li>For larger workflow changes, open an issue or discussion first.</li>
+              <li>Keep PRs focused and explain what changed, why, and what was intentionally left unchanged.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Project Governance Docs</span>
+      <a href="https://github.com/wnjnrwinston/project-governance-docs" target="_blank" rel="noreferrer">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>
