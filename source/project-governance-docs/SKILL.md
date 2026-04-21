@@ -1,6 +1,6 @@
 ---
 name: project-governance-docs
-description: Create project planning, governance, and execution docs for either a new project or an existing codebase. Use when a user asks to define a project before coding, create brief/spec/architecture/runbook/tasks/decisions docs, retrofit governance onto a project already in progress, or document current state first before further implementation. Especially use for requests about project foundation, v1 scope, acceptance criteria, engineering rules, guardrails, phased tasks, risks, assumptions, and open questions.
+description: Create project planning, governance, and execution docs for either a new project or an existing codebase. Use when a user asks to define a project before coding, create brief/spec/architecture/runbook/tasks/decisions docs, retrofit governance onto a project already in progress, or document current state first before further implementation. Especially use for requests about project foundation, v1 scope, acceptance criteria, engineering rules, guardrails, phased tasks, risks, assumptions, and open questions. Also trigger on workflow selector phrases and aliases including `docs menu`, `/docsmenu`, `updatedocs`, `update impacted docs`, `greenfield`, `retrofit`, `backup project`, and `restore project`.
 ---
 
 # Project Governance Docs
@@ -16,7 +16,14 @@ Default goal:
 
 ## Quick invoke
 
-If the user says `docs menu` or `/docsmenu`, present this fixed menu:
+If the user says `docs menu` or `/docsmenu`, always present the fixed Docs Menu below verbatim.
+Do not improvise a custom menu.
+Do not summarize it.
+Do not replace it with repo-specific shortcuts.
+Treat `updatedocs` as a direct alias for `update impacted docs`.
+Treat `greenfield`, `retrofit`, `backup project`, and `restore project` as direct workflow selections even when the user sends only that one word.
+If the workflow choice is already explicit, continue directly instead of showing the menu again.
+If memory is fuzzy or context is long, prefer re-reading this skill over improvising the docs-menu behavior.
 
 ## Docs Menu
 Choose one:

@@ -23,12 +23,16 @@ If mixed:
 
 ## Quick menu vocabulary
 Use these terms consistently:
-- `docs menu` or `/docsmenu` = show the workflow selector
+- `docs menu` or `/docsmenu` = show the fixed workflow selector verbatim
+- `updatedocs` = same as `update impacted docs`
 - `greenfield` = foundation docs before implementation
 - `retrofit` = current-state-first docs for an existing project
 - `update impacted docs` = update only related docs
 - `backup project` = create a real checkpoint
 - `restore project` = restore from a real checkpoint or backup
+
+If the user sends one selector word by itself, treat it as an explicit workflow choice.
+If `/docsmenu` appears after a long conversation, prefer fixed menu behavior over memory of prior custom menus.
 
 ## Decide whether plugin is necessary
 Default to **skill only** when the problem is mainly:

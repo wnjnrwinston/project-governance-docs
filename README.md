@@ -9,6 +9,7 @@ It also supports a simple workflow selector:
 
 - `docs menu`
 - `/docsmenu`
+- `updatedocs`
 - `greenfield`
 - `retrofit`
 - `update impacted docs`
@@ -138,13 +139,19 @@ Use when you need to recover to a real checkpoint.
 
 ## Quick invoke
 
-If you say `docs menu` or `/docsmenu`, the skill should present:
+If you say `docs menu` or `/docsmenu`, the skill should present the fixed menu below verbatim and should not improvise a custom version:
 
 1. `greenfield`
 2. `retrofit`
 3. `update impacted docs`
 4. `backup project`
 5. `restore project`
+
+Additional selector behavior:
+- `updatedocs` = alias for `update impacted docs`
+- `greenfield`, `retrofit`, `backup project`, and `restore project` can be sent by themselves as direct workflow selections
+- if the workflow choice is already explicit, continue directly instead of showing the menu again
+- if `/docsmenu` appears after a long conversation, prefer the fixed menu behavior over remembered custom menus
 
 ## Included files
 
