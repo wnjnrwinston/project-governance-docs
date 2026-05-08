@@ -1,6 +1,6 @@
 ---
 name: project-governance-docs
-description: Create project planning, governance, and execution docs for either a new project or an existing codebase. Use when a user asks to define a project before coding, create brief/spec/architecture/runbook/tasks/decisions docs, retrofit governance onto a project already in progress, or document current state first before further implementation. Especially use for requests about project foundation, v1 scope, acceptance criteria, engineering rules, guardrails, phased tasks, risks, assumptions, and open questions. Also trigger on workflow selector phrases and aliases including `docs menu`, `/docsmenu`, `updatedocs`, `update impacted docs`, `greenfield`, `retrofit`, `backup project`, and `restore project`.
+description: Create project planning, governance, execution docs, or AI-maintained brain docs for either a new project or an existing codebase. Use when a user asks to define a project before coding, create brief/spec/architecture/runbook/tasks/decisions docs, retrofit governance onto a project already in progress, document current state first, create or maintain an Infinite Brain/brain-map/atomic nodes system, prevent fresh-session dumb zone, or keep AI-readable project memory across sessions. Especially use for project foundation, v1 scope, acceptance criteria, engineering rules, guardrails, phased tasks, risks, assumptions, open questions, AI-maintained knowledge graphs, and Obsidian-compatible Markdown brain docs. Also trigger on workflow selector phrases and aliases including `docs menu`, `/docsmenu`, `updatedocs`, `update impacted docs`, `greenfield`, `retrofit`, `brain`, `infinite brain`, `brain-first`, `backup project`, and `restore project`.
 ---
 
 # Project Governance Docs
@@ -21,7 +21,7 @@ Do not improvise a custom menu.
 Do not summarize it.
 Do not replace it with repo-specific shortcuts.
 Treat `updatedocs` as a direct alias for `update impacted docs`.
-Treat `greenfield`, `retrofit`, `backup project`, and `restore project` as direct workflow selections even when the user sends only that one word.
+Treat `greenfield`, `retrofit`, `brain`, `infinite brain`, `brain-first`, `backup project`, and `restore project` as direct workflow selections even when the user sends only that one word.
 If the workflow choice is already explicit, continue directly instead of showing the menu again.
 If memory is fuzzy or context is long, prefer re-reading this skill over improvising the docs-menu behavior.
 
@@ -40,6 +40,10 @@ Choose one:
 5. `restore project` — restore from the latest real checkpoint or backup
    - do not claim restore is possible unless a real checkpoint exists
    - if the target project/repo is unclear, ask which one should be restored
+
+6. `brain` - create or maintain an AI-first Infinite Brain
+   - default docs: `docs/brain/brain-map.md`, `docs/brain/project-state.md`, and atomic nodes under `docs/brain/nodes/`
+   - use this when the user wants fresh sessions to continue from concise AI-readable project memory
 
 Reply with one option name to continue.
 
@@ -73,6 +77,17 @@ Then read:
 - `references/retrofit-mode.md`
 - `references/doc-templates.md`
 
+### Mode 3: Brain-first governance
+Use this when:
+- the user wants Codex/AI to maintain project memory instead of the user reading long canonical docs
+- the user wants to prevent fresh-session dumb zone
+- the user asks for Infinite Brain, brain-map, atomic nodes, Obsidian-compatible brain docs, or AI-first documentation
+- the user selects `brain`, `infinite brain`, or `brain-first` from `docs menu`
+
+Then read:
+- `references/brain-first-mode.md`
+- `references/doc-templates.md`
+
 If classification is ambiguous, inspect the workspace first and state the uncertainty explicitly.
 
 ## Core rules
@@ -86,6 +101,7 @@ Always:
 - prefer practical execution over elegant overdesign
 - update only the docs actually affected by the change
 - prefer a real checkpoint or rollback path before risky implementation work
+- when brain docs exist, treat `docs/brain/brain-map.md` as the first fresh-session entrypoint and keep impacted brain nodes current
 
 Never:
 - invent architecture that is not justified by the project state
@@ -103,6 +119,21 @@ After a task:
 - if implementation changed but existing docs are still accurate, leave them alone
 - if no behavior, scope, rule, operation, or task status changed, no doc update is required
 - prefer targeted edits over broad doc refreshes
+- if `docs/brain/` exists, update impacted brain nodes after meaningful code, scope, decision, pattern, lesson, risk, or task changes
+- do not ask the user to maintain brain docs manually; Codex owns documentation hygiene unless the user says otherwise
+
+## Brain-first fresh-session rule
+
+When a project has `docs/brain/brain-map.md`:
+- read `docs/brain/brain-map.md` before broad documentation or implementation work
+- read `docs/brain/project-state.md` if it exists
+- follow the links to only the relevant nodes for the current task
+- if brain docs and code disagree, inspect code before trusting either
+- if brain docs and older linear docs disagree, mark the conflict and prefer observed code or explicit user direction
+- after meaningful work, update only impacted brain nodes and `brain-map.md`
+- create new nodes only for durable facts, decisions, patterns, lessons, tasks, or risks that will likely matter in a future session
+
+Use brain docs to reduce context load, not to create a large passive archive.
 
 ## Lean learning-loop upgrades
 

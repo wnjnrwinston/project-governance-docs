@@ -60,6 +60,49 @@ Only include questions that affect:
 - Phase 2 / Verification
 - Phase 3 / Deferred or post-v1
 
+## Brain map template
+- Project state: `project-state.md`
+- Active now:
+- Key facts:
+- Active decisions:
+- Reusable patterns:
+- Open tasks:
+- Known risks:
+- Lessons:
+- Deprecated / stale:
+
+## Brain project-state template
+- Purpose:
+- Current status:
+- Active context:
+- Implemented areas:
+- Current priorities:
+- Known gaps:
+- Verification/startup notes:
+- Last updated:
+
+## Brain node template
+```markdown
+---
+type: Fact | Decision | Pattern | Lesson | Task | Risk
+status: Active | Deprecated
+tags: []
+relates_to: []
+source: []
+last_updated: YYYY-MM-DD
+---
+
+# Node Title
+
+Short, specific statement of the durable knowledge.
+
+## Why It Matters
+How this prevents wrong future implementation or repeated context loss.
+
+## Links
+- Brain map: ../../brain-map.md
+```
+
 ## Done + evidence mini-template
 - Done when:
 - Evidence checked:

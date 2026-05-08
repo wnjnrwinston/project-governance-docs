@@ -27,6 +27,7 @@ Use these terms consistently:
 - `updatedocs` = same as `update impacted docs`
 - `greenfield` = foundation docs before implementation
 - `retrofit` = current-state-first docs for an existing project
+- `brain`, `infinite brain`, or `brain-first` = AI-maintained project memory for fresh-session continuity
 - `update impacted docs` = update only related docs
 - `backup project` = create a real checkpoint
 - `restore project` = restore from a real checkpoint or backup
@@ -136,6 +137,22 @@ Prefer work to count as done only when there is compact evidence such as:
 - remaining uncertainty is explicitly named
 
 "Done" without evidence is weak completion, not strong completion.
+
+## Decide whether to create or update brain docs
+Use brain-first docs when:
+- the user wants fresh sessions to continue without long context replay
+- the user wants Codex to maintain project memory
+- a project has repeated context loss, repeated questions, or cross-session handoff friction
+- an existing `docs/brain/brain-map.md` is present
+
+Do not create brain docs when:
+- the task is a one-off quick edit
+- the project is too small to benefit
+- the user only asked for read-only inspection
+- the added node would duplicate obvious or low-value information
+
+When brain docs exist, update only impacted brain docs after meaningful work.
+The user should not be expected to maintain them manually.
 
 ## Decide when to require pre-mortem thinking
 Use a light pre-mortem when work is:
